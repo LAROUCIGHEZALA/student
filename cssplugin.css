@@ -1,0 +1,12 @@
+*{
+    background-color: #fff;
+}
+iframe {
+    width: 60%; 
+    height: 60%; 
+    position: absolute;
+    top: 30%;
+    margin-left: 20%;
+
+    background-color: #fff;
+}
