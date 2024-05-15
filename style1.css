@@ -452,12 +452,11 @@ main .timetable.active .closeBtn{
     }
 }
 .servericon{
-  margin-top: 0%;
-  
-   margin-left: 80%;
-  
-  
-   margin-right: 10%;
+ 
+   display: inline-flex !important;
+   right: 15% !important;
+   position: absolute !important;
+   bottom: 0 !important;
   
   
   
@@ -465,6 +464,7 @@ main .timetable.active .closeBtn{
 img{
     width: 100px;
     height: 100px;
+   
   
   }
   .other-icon img{
@@ -480,11 +480,33 @@ img{
    
     cursor: pointer;
   }
+  .cal{
+    box-shadow: 0 4px 14px #a3bfff40;
+    border-radius: 32px;
+    width: 240px;
+    height: 46px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  .cal p{
+    font-size: 16px;
+    color: #181a1e;
+  }
+  .icenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .calendar-icon {
     position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 90%;
     width: 80px; /* Ajustez la taille de la bulle */
     height: 80px; /* Ajustez la taille de la bulle */
     border-radius: 50%; /* Pour obtenir une forme de cercle */
@@ -493,6 +515,18 @@ img{
     transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre pour l'effet de bulle */
   }
+  .calendar-icon .label {
+  
+   
+    font-size: 14px; 
+    font-weight: bold; 
+    color: #333333; 
+    background-color: #fff;
+}
+
+.calendar-icon:hover .label {
+    display: block; /* Afficher l'étiquette au survol */
+}
   
   .calendar-icon:hover {
     background-color: #7380ec; /* Nouvelle couleur de fond au survol */
@@ -518,12 +552,13 @@ img{
     transition: background-color 0.3s;
   }
   iframe {
-    width: 50%; 
+    width: 60%; 
     height: 50%; 
     position: absolute;
- 
-    margin-left: 30%;
+    top: 90%;
+    margin-left: 20%;
     margin-bottom: 20%;
+    z-index: 1000;
 
 
 }

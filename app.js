@@ -71,6 +71,7 @@ document.querySelector('.timetable div h2').innerHTML = "Today's Timetable";
 function toggleCalendar() {
     var iframe = document.getElementById('iframe');
     var calendarIcon = document.getElementById('calendarIcon');
+    var cal = document.getElementById('cal');
     var storedUrl = localStorage.getItem('calendarUrl'); // Récupérer l'URL depuis le stockage local
   
     if (iframe.style.display === 'none') {
@@ -79,6 +80,8 @@ function toggleCalendar() {
         iframe.style.display = 'block';
         otherIcon.style.display = 'block';
         calendarIcon.style.display = 'none';
+        cal.style.display='none';
+     
       } else {
         console.error('URL du calendrier non trouvée dans le stockage local.');
       }
@@ -96,5 +99,6 @@ function toggleCalendar() {
       otherIcon.style.display = 'block';
       // Cacher l'icône du calendrier
       document.getElementById('calendarIcon').style.display = 'block';
+      document.getElementById('cal').style.display = 'flex';
       otherIcon.style.display = 'none';
     }
